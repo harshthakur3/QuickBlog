@@ -39,7 +39,9 @@ const Blog = () => {
     try {
       const { data } = await axios.post('/api/blog/comments', { blog: id });
       if (data.success) {
-        setComments(data.comments);
+        setComments(data.comments); // Assuming backend already filters only approved comments
+        console.log("Approved comments received:", data.comments);
+
       } else {
         toast.error(data.message);
       }
@@ -47,6 +49,7 @@ const Blog = () => {
       toast.error(error.message);
     }
   };
+
 
 
   const addComment = async (e)=>{
