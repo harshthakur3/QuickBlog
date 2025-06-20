@@ -57,7 +57,7 @@ const AddBlog = () => {
   };
 
   const generateContent = async () => {
-    // your existing logic (if any)
+    toast.error('This feature is not available yet. Please try again later.');
   };
 
   useEffect(() => {
